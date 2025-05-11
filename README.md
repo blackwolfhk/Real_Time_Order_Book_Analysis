@@ -1,4 +1,4 @@
-# 📈 Real-Time Binance Order Book Logger (C++)
+# Real-Time Binance Order Book Logger
 
 This project connects to the Binance WebSocket API and logs real-time order book data (depth updates) for a selected trading pair (e.g., `BTC/USDT`). It computes the **order book imbalance** and logs it to a CSV file for further analysis and backtesting.
 
@@ -19,7 +19,7 @@ This project connects to the Binance WebSocket API and logs real-time order book
 
 Before building, make sure you have the following installed:
 
-### macOS (via Homebrew):
+### macOS (via Homebrew)
 
 ```bash
 brew install boost
@@ -46,7 +46,7 @@ brew install cmake
 cmake --build build --target realtime_orderbook
 ```
 
-### Run the real-time logger:
+### Run the real-time logger
 
 ```bash
 ./build/realtime_orderbook
