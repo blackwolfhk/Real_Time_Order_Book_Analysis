@@ -30,3 +30,21 @@ std::string OrderBook::snapshot_to_csv() {
     double imbalance = calculate_imbalance();
     return std::to_string(imbalance);
 }
+
+std::vector<std::pair<double, double>> OrderBook::get_bids() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    std::vector<std::pair<double, double>> result;
+    for (const auto& bid : bids) {
+        result.emplace_back(bid.price, bid.quantity);
+    }
+    return result;
+}
+
+std::vector<std::pair<double, double>> OrderBook::get_asks() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    std::vector<std::pair<double, double>> result;
+    for (const auto& ask : asks) {
+        result.emplace_back(ask.price, ask.quantity);
+    }
+    return result;
+}

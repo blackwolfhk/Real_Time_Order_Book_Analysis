@@ -1,5 +1,0 @@
-/mnt/c/Users/kelvincheung/Documents/files_storing/Real_Time_Order_Book_Analysis/build/CMakeFiles/realtime_orderbook.dir
-/mnt/c/Users/kelvincheung/Documents/files_storing/Real_Time_Order_Book_Analysis/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/kelvincheung/Documents/files_storing/Real_Time_Order_Book_Analysis/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/kelvincheung/Documents/files_storing/Real_Time_Order_Book_Analysis/build/_deps/json-build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/kelvincheung/Documents/files_storing/Real_Time_Order_Book_Analysis/build/_deps/json-build/CMakeFiles/rebuild_cache.dir

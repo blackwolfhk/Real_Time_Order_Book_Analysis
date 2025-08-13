@@ -14,8 +14,11 @@ public:
     double calculate_imbalance();
     std::string snapshot_to_csv();
 
+std::vector<std::pair<double, double>> get_bids() const;
+std::vector<std::pair<double, double>> get_asks() const;
+
 private:
     std::vector<OrderBookEntry> bids;
     std::vector<OrderBookEntry> asks;
-    std::mutex mtx;
+    mutable std::mutex mtx;
 };
