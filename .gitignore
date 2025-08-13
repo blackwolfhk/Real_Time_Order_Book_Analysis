@@ -1,0 +1,81 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+realtime_orderbook
+
+# Object files
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+
+# Static libraries
+*.a
+*.lib
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# IDE files
+.vscode/
+.vs/
+*.vcxproj*
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Data files (optional - remove if you want to track data)
+data/*.log
+data/orderbook_log.csv
+*.csv
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# Debug files
+*.dSYM/
+*.pdb
+
+# Package manager
+conan.lock
+vcpkg_installed/
+
+# Environment files
+.env
+.env.local
+
+# Core dumps
+core.*
+
+# Backup files
+*.backup
+*.bak
+*.orig

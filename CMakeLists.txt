@@ -6,10 +6,20 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(include)
 
 # Find Boost
-find_package(Boost REQUIRED)
+find_package(Boost REQUIRED COMPONENTS system)
 
 # Find OpenSSL
 find_package(OpenSSL REQUIRED)
+
+# Add nlohmann/json
+find_package(nlohmann_json 3.2.0 QUIET)
+if(NOT nlohmann_json_FOUND)
+    include(FetchContent)
+    FetchContent_Declare(json
+        GIT_REPOSITORY https://github.com/nlohmann/json.git
+        GIT_TAG v3.11.3)
+    FetchContent_MakeAvailable(json)
+endif()
 
 # Main executable
 add_executable(realtime_orderbook
@@ -25,9 +35,8 @@ target_include_directories(realtime_orderbook PRIVATE
 )
 
 target_link_libraries(realtime_orderbook
+    Boost::system
     ${OPENSSL_LIBRARIES}
+    nlohmann_json::nlohmann_json
     pthread
 )
-
-
-target_include_directories(test_csv PRIVATE include)

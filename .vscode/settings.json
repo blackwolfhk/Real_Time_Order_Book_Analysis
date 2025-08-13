@@ -1,4 +1,9 @@
 {
   "C_Cpp.errorSquiggles": "enabled",
-  "cSpell.words": ["backtesting"]
+  "cSpell.words": [
+    "backtesting"
+  ],
+  "files.associations": {
+    "xstring": "cpp"
+  }
 }
